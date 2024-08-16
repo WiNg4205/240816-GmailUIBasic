@@ -10,6 +10,13 @@ export default defineNuxtConfig({
       redirect: "/inbox",
     },
   },
+  vite: {
+    server: {
+      hmr: {
+        overlay: false, // Sometimes helps with stability
+      },
+    },
+  },
   tailwindcss: {
     config: {
       theme: {
@@ -19,10 +26,14 @@ export default defineNuxtConfig({
             headerSearch: '#eaf1fb',
             userIcon: '#0097a7',
             mail: '#f2f6fc',
+            mailBorder: '#ebeff5',
             composeBtn: '#c2e7ff',
             navbarFocus: '#d3e3fd',
             navbarBg: '#f6f8fc',
             filterBtnFocus: '#0b57d0'
+          },
+          width: {
+            'customXL': '44rem',
           },
         },
       },
